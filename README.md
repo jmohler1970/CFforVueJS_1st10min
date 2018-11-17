@@ -6,9 +6,9 @@ ColdFusion for VueJS developers: the first 10 minutes
 
 ## Get ColdFusion
 
-There are two good ways to get ColdFusion
+There are two good ways to get Adobe ColdFusion
 
-- Go to https://www.adobe.com/coldfusion It will then do a redirect to ColdFusion. After you fill out their survey form, you can download the free trial. For the first 30 days, it will become the Developer Edition automatically. Unless you are doing some highly advanced developement, the Developer Edition will work fine. And its free
+- Go to https://www.adobe.com/coldfusion . You will be a redirected to ColdFusion. After you fill out their survey form, you can download the free trial. For the first 30 days, it will become the Developer Edition automatically. Unless you are doing some highly advanced developement, the Developer Edition will work fine. And its free
 
 - Another way to get ColdFusion, Ortus Solutions, and download and install CommandBox. https://www.ortussolutions.com/products/commandbox . As a VueJS developer, you may find CommandBox to be more similar npm development. It is also free for developement work. 
 
@@ -64,6 +64,7 @@ For more details on the request lifecycle, see https://www.bennadel.com/blog/193
 ## `server.json`
 
 This is used by commandbox to bring up the ColdFusion server. This is the simplest and quickest way I know to bring up ColdFusion. It also makes each and every ColdFusion application separate.
+
 
 ## `application.cfc`
 
@@ -141,4 +142,5 @@ Congradulations! You are now running ColdFusion!
 
 - https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tag-summary.html
 
+- https://github.com/jmohler1970/CFforVueJS_1st10min
 
