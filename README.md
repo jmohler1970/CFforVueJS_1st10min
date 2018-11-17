@@ -1,11 +1,51 @@
 # CFforVueJS_1st10min
 ColdFusion for VueJS developers: the first 10 minutes
 
-Let's go through the code in the order that they are processed
 
-# Request livecyle.
+# Getting started
 
-We are going load pages. Each page is only a small part of an application. I have worked on application with hundreds of pages / files. Here are the good parts of this.
+## Get ColdFusion
+
+There are two good ways to get ColdFusion
+
+- Go to https://www.adobe.com/coldfusion It will then do a redirect to ColdFusion. After you fill out their survey form, you can download the free trial. For the first 30 days, it will become the Developer Edition automatically. Unless you are doing some highly advanced developement, the Developer Edition will work fine. And its free
+
+- Another way to get ColdFusion, Ortus Solutions, and download and install CommandBox. https://www.ortussolutions.com/products/commandbox . As a VueJS developer, you may find CommandBox to be more similar npm development. It is also free for developement work. 
+
+The rest of this document assumes that CommandBox will be used.
+
+
+## Get the code
+
+If you haven't done so already, download this Github repository's release. I do all of my work in `~/Sites/ColdFusion/[repository]`. However you can download it anywhere (if you are using CommandBox).
+
+
+# Understanding ColdFusion code
+
+Open up `top_tags.cfm`. This is a simplified sample of ColdFusion code. It does not run, but I want something to talk about without dealing with HTML, CSS, Javascript, or anything else.
+
+
+1. If you are in a file with `.cfm` extention is plain ColdFusion code. If it has a `.cfc` it is an object. In my code if you see a `.cfi` it is plain ColdFusion that can only included as a part of something else.
+
+2. Once you open up your ColdFusion file, if you see what looks like an HTML tag, but it starts with `<cf...>`, it is a ColdFusion tag. Tags can have attributes and contain content. See ColdFusion Documentation for all the tags.
+
+3. If I had to pick the five most important tags in 2018, I would pick
+
+- `<cfoutput>` which shows variables on the screen AND it loops over queries
+- `<cfset>` which sets variables one at a time
+- `<cfquery>` which queries the database
+- `<cfif>` which is a part of control logic
+- `<cfscript>` which gets code out of the tag based code and gets you into something that looks a lot like Javascript.
+
+## What are we building?
+
+The short answer is, we are not building anything. We are not trying to create a `/dist` directory or anything like that. ColdFusion must be installed on any server that runs ColdFusion applications. (OK, there are exceptions). When a request for a page comes, it will go to the Web Server, then to the ColdFusion application server. It will do its processing, return the results to the WebServer which will return it back to the browser that requested it.
+
+
+## More thoughts on request livecyle
+
+
+How is this stuff processed? We are going load pages. Each page is only a small part of an application. I have worked on application with hundreds of pages / files. Here are the good parts of this.
 
 - If one page is broken, the rest of the application still runs
 - Libraries like jQuery and VueJS just get cached by the browser automatically
@@ -17,8 +57,9 @@ The not so good parts
 - There is no easy way to comple the entire app to verify it compiles. (Some CF people are yelling in the background. I said "easy")
 - Everytime a link is followed, or a form is submitted, the browser will blink as it is loading the next page.
 
+For more details on the request lifecycle, see https://www.bennadel.com/blog/1933-mastering-the-coldfusion-application-framework.htm
 
-# Files
+# Files in this repository
 
 ## `server.json`
 
@@ -73,3 +114,31 @@ So I am incrementing `application.counter`, `session.counter`, and `request.coun
 I also have a simple form, that we will be submitting, to see how `form` scoped variables work.
 
 # Let's run it.
+
+In your favorite terminal program...
+
+- Navigate to the directory with your site. For me this is `cd ~/Sites/ColdFusion/CFforVS_1st10min`
+- Type `box` to start up CommandBox
+- Type `install` so that it will download from Adobe the appropriate version of ColdFusion
+- Go make sure that cat and/or dog is fed.
+- After it is done installing, type `start`
+- The main page on the site should show up in your default browser. 
+
+
+Congradulations! You are now running ColdFusion!
+
+
+
+# Resources
+
+- https://www.bennadel.com/
+
+- https://www.bennadel.com/blog/1933-mastering-the-coldfusion-application-framework.htm
+
+- https://www.adobe.com/coldfusion 
+
+- https://www.ortussolutions.com/products/commandbox
+
+- https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tag-summary.html
+
+
