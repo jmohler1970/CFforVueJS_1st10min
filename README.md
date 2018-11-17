@@ -15,7 +15,7 @@ There are two good ways to get Adobe ColdFusion
 The rest of this document assumes that CommandBox will be used.
 
 
-## Get the code
+## Get the code from Github
 
 If you haven't done so already, download this Github repository's release. I do all of my work in `~/Sites/ColdFusion/[repository]`. However you can download it anywhere (if you are using CommandBox).
 
